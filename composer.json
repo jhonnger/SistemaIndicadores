@@ -4,6 +4,11 @@
 	"keywords": ["framework", "laravel"],
 	"license": "MIT",
 	"type": "project",
+	"require-dev":{
+		"way/generators":"2.*",
+         "fzaninotto/faker": "v1.3.0",
+         "barryvdh/laravel-debugbar": "v1.6.1"
+	},
 	"require": {
 		"laravel/framework": "4.2.*"
 	},
