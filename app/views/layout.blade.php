@@ -1,38 +1,76 @@
-<html>
-<head>
-	<title>Inicio</title>
-</head>
-<body>
-<header>
-	<ul>
-		<div>
-			<li>Opcion1</li>
-			<li>Opcion2</li>
-			<li>Opcion3</li>
-			<li>Opcion4</li>
-			<li>Opcion5</li>
-			<form method="POST" action="principal">
-				<select name="tipo">
-					<option value="administrativo">Administrativo</option>
-					<option value="escuela">Escuela</option>
-				</select>
-				<input type="text" placeholder="USUARIO" name = "usuario">
-				<input type="password" placeholder="CLAVE" name = "clave">
-				<input type="submit" value="Ingresar" name = "ingresar">
-			</form>
-		</div>
-		<div>
-			<img src="direccion">
-		</div>
-	</ul>
-</header>
 
-@yield('content')
-</br>
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>PHP con Laravel</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{{ asset('bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
 
 
-<footer>
-@CopyRight Derechos Reservados OCAFCA 2016
-</footer>
-</body>
+    <!-- Custom styles for this template -->
+    <link href="{{ asset('style.css') }}" rel="stylesheet">
+
+    
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Project name</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <form class="navbar-form navbar-right">
+            <div class="form-group">
+              <input type="text" placeholder="Email" class="form-control">
+            </div>
+            <div class="form-group">
+              <input type="password" placeholder="Password" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-success">Sign in</button>
+          </form>
+        </div><!--/.navbar-collapse -->
+      </div>
+    </nav>
+
+    @yield('content')
+
+    <div class="container">
+      <hr>
+
+      <footer>
+        <p>&copy; 2015 Company, Inc.</p>
+      </footer>
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="{{ assets(bootstrap/js/bootstrap.min.js) }}"></script>
+  </body>
 </html>
