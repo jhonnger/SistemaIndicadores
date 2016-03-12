@@ -23,7 +23,7 @@
 				<input type="submit" value="Log in" class="btn btn-success" />
 
 			{{  Form::close()  }}
-
+lkmlklakmlamklaklamklamkl
 			
             </div>
 		</div>	
