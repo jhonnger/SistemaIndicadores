@@ -20,6 +20,7 @@ class CreateUsersTable extends Migration {
 			$table->string('dni');
 			$table->integer('office_id')->unsigned();
 			$table->integer('rol_id')->unsigned();
+			$table->string('password');
 			$table->string('remember_token')->nullable;
 
 			$table->foreign('rol_id')->references('id')->on('roles');
