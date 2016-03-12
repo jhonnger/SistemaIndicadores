@@ -6,7 +6,7 @@ class AuthController extends BaseController {
         $credentials = ['name' => $data['username'], 'password' => $data['password']];
         if (Auth::attempt($credentials))
         {
-            return Redirect::back();
+            return Redirect::route('home');
         }
         return Redirect::back()->with('login_error', 1);
     }
