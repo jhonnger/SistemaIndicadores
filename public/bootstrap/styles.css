@@ -183,3 +183,13 @@ p.login.button, p.signin.button {
     top: 35px;
     width: 30px;
 }
+
+.mb-0 
+{
+    margin-bottom: 0px;
+}
+
+.mb-7 
+{
+    margin-bottom: 7px !important;
+}

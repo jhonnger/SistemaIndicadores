@@ -36,7 +36,7 @@ App::after(function($request, $response)
 
 Route::filter('admin', function()
 {
-	if (is_null(Auth::user()) || Role::adminRoleId() !== Auth::user()->rol_id) return Redirect::to('admin');
+	if (is_null(Auth::user()) || !Auth::user()->isAdmin()) return Redirect::to('admin');
 });
 
 
