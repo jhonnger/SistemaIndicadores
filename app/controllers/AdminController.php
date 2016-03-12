@@ -14,4 +14,8 @@ class AdminController extends BaseController {
 		return View::make('admin/home');
 	}
 
+	public function test() {
+		echo "Solo accedo con usuario admin.";
+	}
+
 }
