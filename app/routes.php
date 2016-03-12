@@ -8,4 +8,7 @@ Route::get('admin',['as' => 'loginAdm', 'uses' => 'AdminController@index']);
 
 Route::post('admin/login', ['as' => 'loginAdm', 'uses' => 'AuthController@login']);
 
-
+Route::group(['before' => 'admin'], function () {
+	// put here your routes protected
+	Route::get('test',['uses' => 'AdminController@test']);
+});

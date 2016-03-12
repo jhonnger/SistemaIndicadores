@@ -1,5 +1,7 @@
 <?php
 
+use SisInd\Entities\Role;
+
 /*
 |--------------------------------------------------------------------------
 | Application & Route Filters
@@ -21,6 +23,22 @@ App::after(function($request, $response)
 {
 	//
 });
+
+/*
+|--------------------------------------------------------------------------
+| Admin Filters
+|--------------------------------------------------------------------------
+|
+| The following filter are used to verify that the user with role ADMIN of the current
+| session can access admin pages
+|
+*/
+
+Route::filter('admin', function()
+{
+	if (is_null(Auth::user()) || Role::adminRoleId() !== Auth::user()->rol_id) return Redirect::to('admin');
+});
+
 
 /*
 |--------------------------------------------------------------------------
