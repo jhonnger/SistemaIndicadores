@@ -5,7 +5,7 @@
 	"license": "MIT",
 	"type": "project",
 	"require-dev":{
-		"way/generators":"2.*",
+	"way/generators":"2.*",
          "barryvdh/laravel-debugbar": "v1.6.1"
 	},
 	"require": {
