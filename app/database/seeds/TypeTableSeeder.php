@@ -1,6 +1,6 @@
 <?php
 
-
+use SisInd\Entities\Type;
 class TypeTableSeeder extends Seeder {
 
 	public function run()
