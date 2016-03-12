@@ -11,7 +11,7 @@
 			{{ Form::open(['route' => 'loginAdm', 'method' => 'post', 'role' => 'form'])}}
 				<div class="form-group">
 					{{  Form::label('username','Usuario')  }}
-					{{  Form::text('user') }}
+					{{  Form::text('username') }}
 				</div>
 
 				<div class="form-group">
